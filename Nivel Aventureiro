@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+int  main(){
+
+    printf("Desafio super trunfo Aventureiro\n" );
+
+
+int pontos, pontos2, populacao, populacao2;
+
+float area, area2, pib, pib2;
+
+//Cidade 1
+
+
+printf("Dados da Cidade 1\n");
+printf("Digite o numero da populacao: ");
+scanf("%d", &populacao);
+
+printf("Digite a Area: ");
+scanf("%f", &area);
+
+printf("Digite o pib: ");
+scanf("%f", &pib);
+
+printf("Digite quantos pontos turisticos tem a Cidade 1: ");
+scanf("%d", &pontos);
+
+//Cidade 2
+
+printf("Dados da Cidade 2\n");
+printf("Digite o numero da populacao: ");
+scanf("%d", &populacao2);
+
+printf("Digite a Area: ");
+scanf("%f", &area2);
+
+printf("Digite o pib: ");
+scanf("%f", &pib2);
+
+printf("Digite quantos pontos turisticos tem a cidade 2: ");
+scanf("%d", &pontos2);
+printf("\n");
+
+printf("    Resumo das Cidades   \n\n ");
+printf("Populacao Cidade 1: %d\n", populacao);
+printf("Populacao Cidade 2: %d\n\n", populacao2);
+
+printf("A area da Cidade 1: %.3f km2\n", area);
+printf("A area da Cidade 2: %.3f km2\n\n", area2);
+
+printf("PIB da Cidade 1: %.2f bilhoes\n", pib);
+printf("PIB da Cidade 2: %.2f bilhoes\n\n", pib2);
+
+printf("Pontos turisticos na Cidade 1: %d\n", pontos);
+printf("Pontos turisticos na Cidade 2: %d", pontos2);
+
+return 0;
+
+}
