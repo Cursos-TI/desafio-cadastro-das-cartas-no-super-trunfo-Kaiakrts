@@ -1,0 +1,97 @@
+#include <stdio.h>
+
+int  main(){
+
+    printf("    Desafio super trunfo\n         " );
+printf("\n");
+
+unsigned long int populacao, populacao2;
+
+int pontos, pontos2, vitoriapib, vitoriapop, vitoriadens, vitoriacap, vitoriaarea, vitoriatur, vitoriapoder;
+
+float area, area2, pib, pib2, densidade, densidade2, pibcap, pibcap2, superpoder, superpoder2;
+
+
+//Cidade 1
+
+printf("Dados da Cidade 1\n");
+printf("Digite o numero da populacao: ");
+scanf("%lu", &populacao);
+
+printf("Digite a Area: ");
+scanf("%f", &area);
+
+printf("Digite o pib: ");
+scanf("%f", &pib);
+
+printf("Digite quantos pontos turisticos tem a Cidade 1: ");
+scanf("%d", &pontos);
+
+//Cidade 2
+
+printf("Dados da Cidade 2\n");
+printf("Digite o numero da populacao: ");
+scanf("%lu", &populacao2);
+
+printf("Digite a Area: ");
+scanf("%f", &area2);
+
+printf("Digite o pib: ");
+scanf("%f", &pib2);
+
+printf("Digite quantos pontos turisticos tem a cidade 2: ");
+scanf("%d", &pontos2);
+printf("\n");
+
+printf("    Resumo das Cidades   \n\n ");
+printf("Populacao Cidade 1: %lu\n", populacao);
+printf("Populacao Cidade 2: %lu\n\n", populacao2);
+
+printf("A area da Cidade 1: %.3f km2\n", area);
+printf("A area da Cidade 2: %.3f km2\n\n", area2);
+
+densidade = (float) populacao / area;
+densidade2 = (float) populacao2 / area2;
+printf("A Densidade populacional da Cidade 1 e de: %.3f hab/km2\n", densidade);
+printf("A Densidade populacional da Cidade 2 e de: %.3f hab/km2\n\n", densidade2);
+
+
+printf("PIB da Cidade 1: %.2f bilhoes\n", pib);
+printf("PIB da Cidade 2: %.2f bilhoes\n\n", pib2);
+
+pibcap =  pib / (float)populacao;
+pibcap2 =  pib2 / (float)populacao2;
+printf("O PIB per capita da Cidade 1 e de: %.3f R$\n", pibcap);
+printf("O PIB per capita da Cidade 2 e de: %.3f R$\n\n", pibcap2);
+
+printf("Pontos turisticos na Cidade 1: %d\n", pontos);
+printf("Pontos turisticos na Cidade 2: %d\n", pontos2);
+printf("\n");
+
+superpoder = (float) populacao + area + pib + (float)pontos + pibcap + (1.0f / densidade);
+superpoder2 = (float) populacao2 + area2 + pib2 + (float)pontos2 + pibcap2 + (1.0f / densidade2);
+
+vitoriapop = populacao > populacao2;
+vitoriaarea = area > area2;
+vitoriapib = pib > pib2;
+vitoriatur = pontos > pontos2;
+vitoriadens = densidade < densidade2;
+vitoriacap = pibcap > pibcap2;
+vitoriapoder = superpoder > superpoder2;
+
+printf("-----------Comparacao das cartas----------------");
+printf("\n");
+printf("Populacao: %lu vs %lu vencedor: %d\n", populacao, populacao2, vitoriapop);
+printf("Area: %f vs %f vencedor: %d\n", area, area2, vitoriaarea);
+printf("Pib: %f vs %f vencedor: %d\n", pib, pib2, vitoriapib);
+printf("Pontos turisticos: %d vs %d vencedor: %d\n", pontos, pontos2, vitoriatur);
+printf("Densidade: %f vs %f vencedor: %d\n", densidade, densidade2, vitoriadens);
+printf("Per capita: %f vs %f vencedor: %d\n", pibcap, pibcap2, vitoriacap);
+printf("\n");
+printf("Super poder: %f vs %f vencedor: %d\n", superpoder, superpoder2, vitoriapoder);
+printf("\n");
+
+
+return 0;
+
+}
